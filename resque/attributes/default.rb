@@ -1,0 +1,12 @@
+default[:resque][:packages] = ['supervisor']
+default[:resque][:resque_bin] = 'bin/resque'
+default[:resque][:resque_scheduler_bin] = 'bin/resque-scheduler'
+default[:resque][:workers] = node['cpu']['total']
+default[:resque][:queue] = 'default'
+default[:resque][:host] = 'localhost'
+default[:resque][:port] = 'localhost'
+default[:resque][:verbose] = true
+default[:resque][:app_include] = 'app/bootstrap.php.cache'
+default[:resque][:interval] = 5
+default[:resque][:blocking] = false
+default[:resque][:interval_scheduler] = 5
