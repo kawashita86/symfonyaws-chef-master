@@ -20,8 +20,8 @@ node[:deploy].each do |app_name, deploy|
             user "apache"
         end
 
-        cwd "#{deploy[:deploy_to]}/current"
-        command "#{deploy[:deploy_to]}/current/#{node[:symfony][:console]} cache:clear --env=prod"
-        only_if do File.exists?("#{deploy[:deploy_to]}/current/#{node[:symfony][:console]}") end
+       # cwd "#{deploy[:deploy_to]}/current"
+       # command "#{deploy[:deploy_to]}/current/#{node[:symfony][:console]} cache:clear --env=prod"
+       # only_if do File.exists?("#{deploy[:deploy_to]}/current/#{node[:symfony][:console]}") end
     end
 end
